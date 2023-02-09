@@ -1,2 +1,2 @@
 #!/bin/bash
-chwon -hR staff:vincent
+sudo chown -R vincent:staff .
