@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# Configure HAproxy to accept encrypted traffic for subdomain www.chiaracaprasi.tech
-
+# Configure HAproxy to accept encrypted traffic for subdomain www.realkollihguruh.tech
 global
         log /dev/log    local0
         log /dev/log    local1 notice
@@ -46,7 +45,7 @@ frontend www-http
     default_backend www-backend
 
 frontend www-https
-    bind *:443 ssl crt /etc/haproxy/certs/www.adxbayo.tech.pem
+    bind *:443 ssl crt /etc/haproxy/certs/www.realkollihguruh.tech.pem
     reqadd X-Forwarded-Proto:\ https
     acl letsencrypt-acl path_beg /.well-known/acme-challenge/
     use_backend letsencrypt-backend if letsencrypt-acl
